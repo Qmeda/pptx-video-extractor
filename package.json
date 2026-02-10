@@ -8,9 +8,6 @@
     "vscode": "^1.80.0"
   },
   "categories": ["Other"],
-  "activationEvents": [
-    "onCommand:pptxVideoExtractor.extractVideos"
-  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [

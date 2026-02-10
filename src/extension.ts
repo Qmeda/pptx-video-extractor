@@ -87,7 +87,7 @@ export function activate(context: vscode.ExtensionContext) {
           vscode.window.showInformationMessage("No video files found in this PPTX.");
         } else {
           vscode.window.showInformationMessage(
-            `Extracted ${extractedCount} video file(s) to: ${outputDir}"
+            `Extracted ${extractedCount} video file(s) to: ${outputDir}`
           );
         }
       } catch (err: any) {
