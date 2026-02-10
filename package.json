@@ -1,0 +1,44 @@
+{
+  "name": "pptx-video-extractor",
+  "displayName": "PPTX Video Extractor",
+  "description": "Extract videos from PPTX files.",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:pptxVideoExtractor.extractVideos"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pptxVideoExtractor.extractVideos",
+        "title": "Extract Videos from PPTX"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "pptxVideoExtractor.extractVideos",
+          "when": "resourceExtname == .pptx",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  }
+}
